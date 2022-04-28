@@ -6,7 +6,6 @@ from kivy.uix.screenmanager import Screen, ScreenManager
 navigation_helper = """
 ScreenManager:
     GetStartedScreen:
-    RegisterScreen:
     
 <GetStartedScreen>:
     name: 'screen1'
@@ -85,7 +84,7 @@ ScreenManager:
                         padding: '8dp'
                         text:' Register Now'
                         pos_hint:{"center_x":0.5}
-                        on_press: root.manager.current = 'screen2'
+                        on_press: root.manager.current = 'screen1'
                            
                     MDRectangleFlatButton:
                         spacing: '8dp'
@@ -120,280 +119,16 @@ ScreenManager:
                 size_hint_y: None
                 height: self.texture_size[1]
     
-<RegisterScreen>:
-    name: 'screen2'
-    BoxLayout:
-        orientation: 'vertical'
-        ScrollView:
-            
-            
-            MDCard:
-                size_hint: None, None
-                size:root.width,1369
-                spacing: 25
-                padding: 25
-                elevation: 10
-                orientation: 'vertical'
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint_y: None
-                text_size: self.width, None
-                    
-                Widget:
-                    size_hint_y: None
-                    height:20
-            
-                MDLabel:
-                    id: logo_text
-                    text: "Gwitara"
-                    font_size: 40
-                    halign: 'center'
-                    size_hint_y: None
-                    height: self.texture_size[1]
-                    padding_y:15
-                
-                MDTextFieldRound:
-                    id: firstname
-                    hint_text: "First name"
-                    icon_right: "account"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
 
-                MDTextFieldRound:
-                    id: middlename
-                    hint_text: "Middle name"
-                    icon_right: "account"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
-                    
-                MDTextFieldRound:
-                    id: lastname
-                    hint_text: "Last name"
-                    icon_right: "account"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
-                MDTextFieldRound:
-                    id: gender
-                    hint_text: "Gender"
-                    icon_right: "account"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
-                MDTextFieldRound:
-                    id: DOB
-                    hint_text: "Date of Birth"
-                    icon_right: "calendar"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
-                MDTextFieldRound:
-                    id: phonenumber
-                    hint_text: "Phone number"
-                    icon_right: "phone"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
-
-                MDTextFieldRound:
-                    id: useremail
-                    hint_text: "Email"
-                    icon_right: "email"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
-                MDTextFieldRound:
-                    id: county
-                    hint_text: "County"
-                    icon_right: "map"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
-                MDTextFieldRound:
-                    id: subcounty
-                    hint_text: "Sub-County"
-                    icon_right: "map"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
-
-                MDTextFieldRound:
-                    id: ward
-                    hint_text: "Ward"
-                    icon_right: "map"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
-
-                
-
-                MDRoundFlatButton:
-                    text: "Register"
-                    font_size:12
-                    pos_hint:{"center_x":0.5}
-                    on_press: root.manager.current = 'screen1'
-
-                MDRoundFlatButton:
-                    text: "Back home"
-                    font_size:12
-                    pos_hint:{"center_x":0.5}
-                    on_press: root.manager.current = 'screen1'
-                Widget:
-                    size_hint_y: None
-                    height:50
-    MDNavigationLayout:
-        ScreenManager:
-            Screen:
-                BoxLayout:
-                    orientation: 'vertical'
-                    MDToolbar:
-                        title: 'Gwitara'
-                        left_action_items: [["menu", lambda x: nav_drawer.set_state('toggle')]]
-                        elevation: 10
-                    Widget: 
-                    
-    MDNavigationDrawer:
-        id: nav_drawer
-        BoxLayout:
-            orientation: 'vertical'
-            spacing: '8dp'
-            padding: '8dp'
-            Image:
-                source: 'logo.png'
-            MDLabel:
-                text: 'Gwitara App .'
-                font_style: 'Subtitle1'
-                size_hint_y: None
-                height: self.texture_size[1]
-            ScrollView: 
-                MDList: 
-                    MDRectangleFlatButton:
-                        spacing: '8dp'
-                        padding: '8dp'
-                        text:' Register Now'
-                        pos_hint:{"center_x":0.5}
-                        on_press: root.manager.current = 'screen2'
-                        
-                    MDRectangleFlatButton:
-                        spacing: '8dp'
-                        padding: '8dp'
-                        text:' Visit Website'
-                        pos_hint:{"center_x":0.5}
-                        on_press: app.any_Function()
-                    
-                    MDRectangleFlatButton:
-                        
-                        text:'Exit App'
-                        pos_hint:{"center_x":0.5}
-                        on_press: app.stop() 
-            
-            MDLabel:
-                text: 'Powered by: Pigeon Data Handlers In Collaboration with Kikuyu Council of Elders'
-                font_style: 'Caption'
-                size_hint_y: None
-                height: self.texture_size[1]
-            
-                
-            
-            MDLabel:
-                text: 'Version 1.0; Copyright ©'
-                font_style: 'Caption'
-                size_hint_y: None
-                height: self.texture_size[1]
-            
-            MDLabel:
-                text: 'Pigeon Data Handlers 2022'
-                font_style: 'Caption'
-                size_hint_y: None
-                height: self.texture_size[1]
-    MDBottomAppBar:
-        
-        MDToolbar:
-        
-            mode: 'free-end'
-            type: 'bottom'
-            icon: 'pen'
-            on_action_button: nav_drawer.set_state('toggle')
-            
-            MDLabel:
-                id: footer_text
-                text: "Powered by: Pigeon Data Handlers In Collaboration with Kikuyu Council of Elders"
-                font_size: 12
-                halign: 'center'
-                color: (1, 1, 1, 1)
-                size_hint_y: None
-                height: self.texture_size[1]
-                padding_y:5    
-               
-    MDNavigationDrawer:
-        id: nav_drawer
-        BoxLayout:
-            orientation: 'vertical'
-            spacing: '8dp'
-            padding: '8dp'
-            Image:
-                source: 'logo.png'
-            MDLabel:
-                text: 'Gwitara App .'
-                font_style: 'Subtitle1'
-                size_hint_y: None
-                height: self.texture_size[1]
-            ScrollView: 
-                MDList: 
-                    MDRectangleFlatButton:
-                        spacing: '8dp'
-                        padding: '8dp'
-                        text:' Register Now'
-                        pos_hint:{"center_x":0.5}
-                        on_press: root.manager.current = 'screen2'
-                        
-                    MDRectangleFlatButton:
-                        spacing: '8dp'
-                        padding: '8dp'
-                        text:' Visit Website'
-                        pos_hint:{"center_x":0.5}
-                        on_press: app.any_Function()
-                    
-                    MDRectangleFlatButton:
-                        
-                        text:'Exit App'
-                        pos_hint:{"center_x":0.5}
-                        on_press: app.stop() 
-            
-            MDLabel:
-                text: 'Powered by: Pigeon Data Handlers In Collaboration with Kikuyu Council of Elders '
-                font_style: 'Caption'
-                size_hint_y: None
-                height: self.texture_size[1]
-            
-            MDLabel:
-                text: 'Copyright © Pigeon Data Handlers 2022'
-                font_style: 'Caption'
-                size_hint_y: None
-                height: self.texture_size[1]
-                        
-            
 """
 
 class GetStartedScreen(Screen):
     pass
-class RegisterScreen(Screen):
-    pass
+
 
 sm = ScreenManager()
 sm.add_widget(GetStartedScreen(name='screen1'))
-sm.add_widget(RegisterScreen(name='screen2'))
+
 
 
 class Gwitara(MDApp):
@@ -402,22 +137,7 @@ class Gwitara(MDApp):
         self.theme_cls.primary_palette = 'Brown'
         screen = Builder.load_string(navigation_helper)
         return  screen 
-    def navigation_draw(self):
-        print("Navigation")  
-    def registermember(self):
-        self.root.ids.logo_text.text = f'Thank you {self.root.ids.sirname.text} for Registering'
-    def clearfields(self):
-        self.root.ids.logo_text.text = "Gwitara"
-        self.root.ids.firstname.text = ""
-        self.root.ids.middlename.text = ""
-        self.root.ids.lastname.text = ""
-        self.root.ids.gender.text = ""
-        self.root.ids.DOB.text = ""
-        self.root.ids.phonenumber.text = ""
-        self.root.ids.useremail.text = ""
-        self.root.ids.county.text = ""
-        self.root.ids.subcounty.text = ""
-        self.root.ids.ward.text = ""
+   
         
     def any_Function(instance):
 
