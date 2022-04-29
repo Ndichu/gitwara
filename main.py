@@ -18,7 +18,9 @@ ScreenManager:
         MDLabel:
             text: 'Gwitara App is a tool for self-registration of members of the Agikuyu Community wherever they are. It is voluntary and free. The information you give shall be treated as highly confidential and shall only be used for purposes of information sharing among the Agikuyu people and establishing our numerical strength as a community.'
             halign:'center'
-            font_style: 'Caption'
+            font_style: 'Subtitle1'
+            
+            
         Widget:
             size_hint_y: None
             height:10
@@ -127,7 +129,7 @@ ScreenManager:
         
         MDCard:
             size_hint: None, None
-            size:root.width,1369
+            size:root.width,1100
             spacing: 25
             padding: 25
             elevation: 12
