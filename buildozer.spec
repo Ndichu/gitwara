@@ -4,7 +4,7 @@
 title = Gwitara
 
 # (str) Package name
-package.name = gwitarabypigieon
+package.name = gwitara
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.0.0,kivymd==0.104.1,pillow
+requirements = python3,kivy==2.0.0,kivymd,pillow
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
