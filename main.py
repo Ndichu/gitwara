@@ -129,7 +129,7 @@ ScreenManager:
         
         MDCard:
             size_hint: None, None
-            size:root.width,1390
+            size:root.width,root.height
             spacing: 25
             padding: 25
             elevation: 12
