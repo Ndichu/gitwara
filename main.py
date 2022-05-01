@@ -124,132 +124,138 @@ ScreenManager:
 <RegisterScreen>:
     name: 'screen2'
     ScrollView:
-        MDGridLayout:
-            col:1
-            ScrollView:
+        
+        BoxLayout:
             
-            MDCard:
-                size_hint: None, None
-                size:root.width, 1300
-                spacing: 25
-                padding: 25
-                elevation: 12
-                orientation: 'vertical'
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint_y: None
-                text_size: self.width, None
-                background_color: (150, 75, 0)
-                
-                MDLabel:
-                    id: head_text
-                    text: "Gwitara"
-                    font_size: 40
+            ScrollView:
+                size_hint_y: .73
+                pos_hint: {'x':0, 'y': .11}
+                do_scroll_x: False
+                do_scroll_y: True
+                MDCard:
+                    
+                    elevation: 12
+                    orientation: 'vertical'
+                    height: self.minimum_height
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint_y: None
+                    padding: 5
+                    spacing: 5
+
                     halign: 'center'
-                    size_hint_y: None
-                    height: self.texture_size[1]
-                    padding_y:15
-                
-                MDTextFieldRound:
-                    id: firstname
-                    hint_text: "First name"
-                    icon_right: "account"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
-
-                MDTextFieldRound:
-                    id: middlename
-                    hint_text: "Middle name"
-                    icon_right: "account"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
+                    text_size: self.width, self.height
+                    background_color: (150, 75, 0)
                     
-                MDTextFieldRound:
-                    id: lastname
-                    hint_text: "Last name"
-                    icon_right: "account"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
-                
-                MDTextFieldRound:
-                    id: gender
-                    hint_text: "Gender: Male or Female"
-                    icon_right: "user"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
+                    MDLabel:
+                        id: head_text
+                        text: "Gwitara"
+                        font_size: 40
+                        halign: 'center'
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y:15
                     
-                MDTextFieldRound:
-                    id: DOB
-                    hint_text: "Date of Birth: day/month/year"
-                    icon_right: "calender"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
+                    MDTextFieldRound:
+                        id: firstname
+                        hint_text: "First name"
+                        icon_right: "account"
+                        size_hint_x: None
+                        width: 200
+                        font_size:18
+                        pos_hint:{"center_x": 0.5}
+
+                    MDTextFieldRound:
+                        id: middlename
+                        hint_text: "Middle name"
+                        icon_right: "account"
+                        size_hint_x: None
+                        width: 200
+                        font_size:18
+                        pos_hint:{"center_x": 0.5}
+                        
+                    MDTextFieldRound:
+                        id: lastname
+                        hint_text: "Last name"
+                        icon_right: "account"
+                        size_hint_x: None
+                        width: 200
+                        font_size:18
+                        pos_hint:{"center_x": 0.5}
                     
-                MDTextFieldRound:
-                    id: userphone
-                    hint_text: "Phone number"
-                    icon_right: "phone"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
+                    MDTextFieldRound:
+                        id: gender
+                        hint_text: "Gender: Male or Female"
+                        icon_right: "user"
+                        size_hint_x: None
+                        width: 200
+                        font_size:18
+                        pos_hint:{"center_x": 0.5}
+                        
+                    MDTextFieldRound:
+                        id: DOB
+                        hint_text: "Date of Birth: day/month/year"
+                        icon_right: "calender"
+                        size_hint_x: None
+                        width: 200
+                        font_size:18
+                        pos_hint:{"center_x": 0.5}
+                        
+                    MDTextFieldRound:
+                        id: userphone
+                        hint_text: "Phone number"
+                        icon_right: "phone"
+                        size_hint_x: None
+                        width: 200
+                        font_size:18
+                        pos_hint:{"center_x": 0.5}
 
-                MDTextFieldRound:
-                    id: useremail
-                    hint_text: "Email"
-                    icon_right: "email"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
+                    MDTextFieldRound:
+                        id: useremail
+                        hint_text: "Email"
+                        icon_right: "email"
+                        size_hint_x: None
+                        width: 200
+                        font_size:18
+                        pos_hint:{"center_x": 0.5}
 
-                
-                MDTextFieldRound:
-                    id: county
-                    hint_text: "County"
-                    icon_right: "map"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
-                
-                MDTextFieldRound:
-                    id: subcounty
-                    hint_text: "Sub-County"
-                    icon_right: "map"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
+                    
+                    MDTextFieldRound:
+                        id: county
+                        hint_text: "County"
+                        icon_right: "map"
+                        size_hint_x: None
+                        width: 200
+                        font_size:18
+                        pos_hint:{"center_x": 0.5}
+                    
+                    MDTextFieldRound:
+                        id: subcounty
+                        hint_text: "Sub-County"
+                        icon_right: "map"
+                        size_hint_x: None
+                        width: 200
+                        font_size:18
+                        pos_hint:{"center_x": 0.5}
 
 
-                MDTextFieldRound:
-                    id: ward
-                    hint_text: "Ward"
-                    icon_right: "map"
-                    size_hint_x: None
-                    width: 200
-                    font_size:18
-                    pos_hint:{"center_x": 0.5}
+                    MDTextFieldRound:
+                        id: ward
+                        hint_text: "Ward"
+                        icon_right: "map"
+                        size_hint_x: None
+                        width: 200
+                        font_size:18
+                        pos_hint:{"center_x": 0.5}
 
-                
-                MDRoundFlatButton:
-                    text: "SUBMIT"
-                    font_size:12
-                    pos_hint:{"center_x":0.5}
-                    on_press: root.manager.current = 'screen1'
-                Widget:
-                    size_hint_y: None
-                    height:36
+                    
+                    MDRoundFlatButton:
+                        text: "SUBMIT"
+                        font_size:12
+                        pos_hint:{"center_x":0.5}
+                        on_press: root.manager.current = 'screen1'
+                    Widget:
+                        size_hint_y: None
+                        height:36
     MDBottomAppBar:
         MDToolbar:
             mode: 'free-end'
