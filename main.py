@@ -126,7 +126,10 @@ ScreenManager:
     ScrollView:
         
         BoxLayout:
-            
+            adaptive_height: True
+            padding: 15
+            halign: 'center'
+
             ScrollView:
                 size_hint_y: .73
                 pos_hint: {'x':0, 'y': .11}
@@ -135,12 +138,13 @@ ScreenManager:
                 MDCard:
                     
                     elevation: 12
+                    adaptive_height: True
                     orientation: 'vertical'
                     height: self.minimum_height
                     pos_hint: {"center_x": .5, "center_y": .5}
                     size_hint_y: None
-                    padding: 5
-                    spacing: 5
+                    padding: 15
+                    spacing: 15
 
                     halign: 'center'
                     text_size: self.width, self.height
